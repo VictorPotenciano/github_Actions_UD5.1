@@ -1,5 +1,4 @@
-const index = require('../index.js');
-const express = require('express');
+const app = require('../index.js'); // Importa el servidor ya configurado en index.js
 const _ = require('underscore');
 
 const port = process.env.PORT || 3000;
@@ -16,7 +15,6 @@ const animals = {
 function getAnimal() {
   return _.sample(Object.entries(animals));
 }
-
 
 app.get('/', async (req, res, next) => {
   try {
@@ -50,8 +48,3 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something went wrong!');
 });
 
-const server = app.listen(port, () => {
-  console.log(`Launching server on http://localhost:${port}`);
-});
-
-module.exports = server; 
