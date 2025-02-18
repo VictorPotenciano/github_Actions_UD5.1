@@ -17,7 +17,6 @@ function getAnimal() {
   return _.sample(Object.entries(animals));
 }
 
-const app = express();
 
 app.get('/', async (req, res, next) => {
   try {
