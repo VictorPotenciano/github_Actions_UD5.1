@@ -1,5 +1,5 @@
-const app = require('../app.js');
-const express = require('express');
+const app = require('../index.js');
+
 const _ = require('underscore');
 
 const port = process.env.PORT || 3000;
@@ -18,7 +18,7 @@ function getAnimal() {
   return _.sample(Object.entries(animals));
 }
 
-const app = express();
+
 
 app.get('/', async (req, res, next) => {
   try {
