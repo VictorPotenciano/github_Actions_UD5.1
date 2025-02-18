@@ -1,4 +1,4 @@
-const app = require('../app.js');
+const app = require('../index.js');
 const express = require('express');
 const _ = require('underscore');
 
